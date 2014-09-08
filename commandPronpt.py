@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import sys # モジュール属性 argv を取得するため
+import os
 
 def commandLine():
     argvs = sys.argv  # コマンドライン引数を格納したリストの取得
@@ -11,4 +12,5 @@ def commandLine():
         quit()         # プログラムの終了
     
     arraySentence = argvs[1].split("&")
-    return arraySentence
+    print  os.path.isdir(arraySentence[0])
+    return arraySentence[0]

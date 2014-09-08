@@ -4,8 +4,8 @@
 import os
 import commandPronpt
 
-def fileListInFolder():
-    list = os.listdir(".")
+def fileListInFolder(path):
+    list = os.listdir(path)
     ofStream = open('fileList.txt', 'w') # 書き込みモードで開く
     str = ""
 
@@ -15,6 +15,6 @@ def fileListInFolder():
     ofStream.write(str)
     ofStream.close()
 
-
-print commandPronpt.commandLine()
-fileListInFolder()
+folderPath = commandPronpt.commandLine()
+print folderPath
+fileListInFolder(folderPath)
