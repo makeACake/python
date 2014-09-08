@@ -11,6 +11,4 @@ def commandLine():
         quit()         # プログラムの終了
     
     arraySentence = argvs[1].split("&")
-    print arraySentence
-
-commandLine()
+    return arraySentence

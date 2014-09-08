@@ -2,13 +2,19 @@
 # -*- coding: utf-8 -*-
 
 import os
+import commandPronpt
 
-list = os.listdir(".")
-ofStream = open('fileList.txt', 'w') # 書き込みモードで開く
-str = ""
+def fileListInFolder():
+    list = os.listdir(".")
+    ofStream = open('fileList.txt', 'w') # 書き込みモードで開く
+    str = ""
 
-for file in list:
- str += file + '\n'
+    for file in list:
+        str += file + '\n'
 
-ofStream.write(str)
-ofStream.close()
+    ofStream.write(str)
+    ofStream.close()
+
+
+print commandPronpt.commandLine()
+fileListInFolder()
